@@ -1,5 +1,7 @@
 # n-Dimensional Delaunay Triangulation
 
+![Delauney.gif](Delauney.gif)
+
 A C# implementation of Delaunay triangulation that works in any number of dimensions.
 The core library produces a simplicial complex — in 2D a triangle mesh, in 3D a tetrahedral mesh, in nD a collection of n-simplices — with the Delaunay property: the circumball of every simplex contains no other input point.
 
@@ -31,13 +33,13 @@ Disable with `UseLocalCandidates = false` for small point sets (a few dozen poin
 
 Measured on 4 cores (parallel recursion enabled):
 
-| d | N | local (ms) | brute (ms) | speedup |
-|---|---|---|---|---|
-| 2 | 300 | ~120 | ~200 | ~1.7× |
-| 2 | 600 | ~230 | ~640 | ~2.8× |
-| 2 | 1000 | ~380 | ~560 | ~1.5× |
-| 3 | 60 | ~35 | ~44 | ~1.3× |
-| 3 | 100 | ~77 | ~97 | ~1.3× |
+| d   | N    | local (ms) | brute (ms) | speedup |
+| --- | ---- | ---------- | ---------- | ------- |
+| 2   | 300  | ~120       | ~200       | ~1.7×   |
+| 2   | 600  | ~230       | ~640       | ~2.8×   |
+| 2   | 1000 | ~380       | ~560       | ~1.5×   |
+| 3   | 60   | ~35        | ~44        | ~1.3×   |
+| 3   | 100  | ~77        | ~97        | ~1.3×   |
 
 Local-candidates scaling from N=300→1000 in 2D is roughly linear (N=300: 120ms → N=1000: 380ms ≈ 3.2× for 3.3× more points).
 
