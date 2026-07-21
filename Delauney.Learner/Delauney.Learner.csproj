@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="wdbc.data" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wdbc.data">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+		<PackageReference Include="MathNet.Numerics.MKL.Linux-x64" Version="2.0.0" />
+		<PackageReference Include="MathNet.Numerics.MKL.Win-x64" Version="3.0.0" />
+		<PackageReference Include="Microsoft.Data.Analysis" Version="0.21.0" />
+		<PackageReference Include="Microsoft.ML" Version="3.0.0" />
+		<PackageReference Include="Microsoft.ML.DataView" Version="3.0.0" />
+
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Delauney.Distances\Delauney.Distances.csproj" />
+	  <ProjectReference Include="..\Delauney.Triangulation\Delauney.Triangulation.csproj" />
+	  <ProjectReference Include="..\Delauney.Util\Delauney.Util.csproj" />
+	  <ProjectReference Include="..\KdTreeLib\KdTreeLib.csproj" />
+	</ItemGroup>
+</Project>

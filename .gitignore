@@ -1,0 +1,59 @@
+## Build outputs
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
+*.userosscache
+*.sln.docstates
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild/
+[Pp]ublish/
+
+## JetBrains
+.idea/
+*.sln.iml
+
+## Rider
+*.DotSettings.user
+
+## Misc
+*.DS_Store
+Thumbs.db
+Desktop.ini
+
+## AI assistant config
+.claude/
+CLAUDE.md
+
+## Local test data (large / personal)
+Delauney.Pruebas/pb.csv
+Delauney.Pruebas/wdbc.data
+
+## Vendored sources not in solution
+MIConvexHull-master/
+Delauney.RTree/
+RBush/
+miniball/
